@@ -1,4 +1,4 @@
-import com.example.multhithreading.service
+package com.example.multithreading.service;
   
 public class TaskSimulator {
     public static void simulateTask() {

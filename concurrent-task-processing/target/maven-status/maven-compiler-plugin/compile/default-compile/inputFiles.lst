@@ -1,6 +1,5 @@
-C:\Users\DELL\Downloads\demo\demo\src\main\java\com\example\demo\controller\ProductController.java
-C:\Users\DELL\Downloads\demo\demo\src\main\java\com\example\demo\DemoApplication.java
-C:\Users\DELL\Downloads\demo\demo\src\main\java\com\example\demo\model\Product.java
-C:\Users\DELL\Downloads\demo\demo\src\main\java\com\example\demo\model\ProductPrice.java
-C:\Users\DELL\Downloads\demo\demo\src\main\java\com\example\demo\model\UnifiedProduct.java
-C:\Users\DELL\Downloads\demo\demo\src\main\java\com\example\demo\service\ProductService.java
+C:\COMMON\Spring Boot\Java_Projects\concurrent-task-processing\src\main\java\com\example\multithreading\controller\TaskController.java
+C:\COMMON\Spring Boot\Java_Projects\concurrent-task-processing\src\main\java\com\example\multithreading\service\TaskSimulator.java
+C:\COMMON\Spring Boot\Java_Projects\concurrent-task-processing\src\main\java\com\example\multithreading\service\TraditionalThreadService.java
+C:\COMMON\Spring Boot\Java_Projects\concurrent-task-processing\src\main\java\com\example\multithreading\service\VirtualThreadService.java
+C:\COMMON\Spring Boot\Java_Projects\concurrent-task-processing\src\main\java\com\example\multithreading\ThreadComparisonApplication.java
