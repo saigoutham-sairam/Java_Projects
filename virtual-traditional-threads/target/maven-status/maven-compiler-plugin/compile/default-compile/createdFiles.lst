@@ -1,5 +1,0 @@
-com\example\multithreading\service\VirtualThreadService.class
-com\example\multithreading\ThreadComparisonApplication.class
-com\example\multithreading\controller\TaskController.class
-com\example\multithreading\service\TaskSimulator.class
-com\example\multithreading\service\TraditionalThreadService.class

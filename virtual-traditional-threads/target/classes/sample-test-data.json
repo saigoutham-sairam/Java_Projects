@@ -18,5 +18,7 @@
   "https://httpbin.org/delay/1",
   "https://httpbin.org/delay/1",
   "https://httpbin.org/delay/1",
-  "https://httpbin.org/delay/1"
+  "https://httpbin.org/delay/1",
+  "https://httpbin.org/delay/2",
+  "https://bad.url.fake"
 ]
