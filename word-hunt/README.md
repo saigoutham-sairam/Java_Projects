@@ -45,7 +45,8 @@ Total occurrences of 'java': 42
 ---
 
 ## Tools & Tech
-- Java 17
+
+- Java 21
 - Spring Boot 3.x
 - Spring Web
 - ForkJoinPool (java.util.concurrent)
@@ -70,4 +71,5 @@ Use the Swagger interface to test the `/wordcount` endpoint.
 ---
 
 ## Author
-Developed by [Your Name], using Java's parallel programming power 💪.
+Developed by Saigoutham Sairam, using Java's parallel programming power 💪.
+
