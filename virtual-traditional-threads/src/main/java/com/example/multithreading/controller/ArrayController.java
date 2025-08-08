@@ -1,6 +1,5 @@
 package com.example.multithreading.controller;
 
-import com.example.multithreading.LearningApplication;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +10,7 @@ import java.math.BigInteger;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -257,6 +257,9 @@ class ArrayController {
                 result.add(s);
             }
         }
+        //Count the frequency
+        //dataset.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream();
+
         result.forEach(System.out::println);
         for (String str : lowerCaseData) {
             String reversedStr = new StringBuilder(str).reverse().toString();
@@ -356,7 +359,7 @@ class ArrayController {
                 new Student("test2", "Mumbai"),
                 new Student("test3", "Bangalore"),
                 new Student("test4", "Bangalore"));
-        var list1 = studentList.stream().filter(list -> list.getCity().equals("Bangalore")).collect(Collectors.toList());
+        var list1 = studentList.stream().filter(list -> list.getCity().equals("Bangalore")).toList();
         list1.forEach(System.out::println);
         List<String> filtered = studentList.stream().filter(list -> list.getCity().equals("Bangalore")).map(Student::getName).collect(Collectors.toList());
         filtered.forEach(System.out::println);
@@ -365,6 +368,8 @@ class ArrayController {
     public  void sortBasedOnLength(){
         List<String> listOfStrings = Arrays.asList("AC", "BCD", "EFGHS", "IJKLAMSNCA", "C");
         //sort this based on the length
+
+        listOfStrings.sort(Comparator.naturalOrder());
 
         listOfStrings.sort(Comparator.comparingInt(String::length));
         listOfStrings.forEach(System.out::println);
@@ -395,6 +400,16 @@ class ArrayController {
 
         List<Integer> intList = listOfListInt.stream().flatMap(Collection::stream).toList();
         intList.forEach( s -> System.out.println("Integer : " + s));
+
+        Optional<CompletableFuture<Integer>> msg = Optional.of(CompletableFuture.supplyAsync(
+                () -> 10 / 0
+        ).exceptionally(
+                ex -> {
+                    System.out.println("Invalid Operation");
+                    return Integer.valueOf("Error");
+                }));
+        msg.ifPresent(System.out::println);
+
     }
 
 }
