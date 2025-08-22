@@ -28,9 +28,12 @@ class LearningApplication {
 
 
         List<Integer> list = Arrays.asList(1,21,11,31,101,91,101);
+
+        String s = list.stream().anyMatch(n -> n == 101) ? "Yes" : "No";
         System.out.println(list.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst());
 
     }
+
 
 
 }

@@ -1,7 +1,9 @@
 package com.example.multithreading;
 
 import lombok.*;
+import org.jetbrains.annotations.NotNull;
 
+import javax.swing.text.html.parser.Entity;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -236,9 +238,41 @@ Print all remaining elements*/
         System.out.println("From Array : -> " + intSummaryStatistics);
     }
 
+
+    private static void secondHighest(){
+        List<Integer> numbers = Arrays.asList(5, 1, 9, 2, 9, 7, 5);
+
+        Integer kNumber = numbers.stream()
+                .distinct()
+                .sorted(Comparator.reverseOrder())
+                .skip(1).findFirst()
+                .orElse(null);
+
+        System.out.println(kNumber);
+    }
+
+    private static void ListToMap(){
+        List<String> list = Arrays.asList("Java", "Spring", "Docker", "AWS");
+
+        Map<Integer, List<String>> map = list.stream()
+                .collect(Collectors.groupingBy(String::length));
+        System.out.println(map);
+    }
+
+    private static void charFrequency(){
+        String str = "epam interview";
+
+        Map<Character, Long> collect = str.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(collect);
+
+
+    }
+
     public static
     void main(String[] args) {
-        test14();
+        charFrequency();
     }
 
 }
